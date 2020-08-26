@@ -59,9 +59,67 @@ float constrain(float in, float min, float max) {
     }
 }
 
-upled_command(char* msg, int len,
-              float& sp_theta, float& kp_theta, float& kd_theta,
-              float& sp_gamma, float& kp_gamma, float& kd_gamma) {
+/**
+* Parses a current set point message and sets the set points
+* Assumes the message is in format "C<short1><short2><checksum>\n"
+
+* @param msg   String: Message to parse
+* @param len   int: Number of bytes in the char array
+* @param i0    float&: Output parameter for axis0 set point
+* @param i1    float&: Output parameter for axis1 set point
+* @return      int:    1 if success, -1 if failed to find get full message or checksum failed
+*/
+int parse_dual_current(char* msg, int len, float& i0, float& i1) {
+    const float MULTIPLIER = 100.0f;
+    // Message: 1 byte for 'C', 4 bytes for values, 1 byte for checksum = 6 total bytes
+    if (len != 6) {
+        return -1; // error in message length
+    } else {
+        // get the short values from the byte array
+        // NOTE: the 1st short starts at index 1! This is because the first character is "C"
+        uint16_t i0_16 = (msg[2] << 8) | msg[1];
+        uint16_t i1_16 = (msg[4] << 8) | msg[3];
+        uint8_t rcvdCheckSum = msg[5];
+
+        // compute checksum, including the character C
+        uint8_t checkSum = 0;
+        checkSum ^= msg[0]; // character 'C'
+        checkSum ^= msg[1];
+        checkSum ^= msg[2];
+        checkSum ^= msg[3];
+        checkSum ^= msg[4];
+
+        // check if the check sum matched
+        if (checkSum == rcvdCheckSum) {
+            // convert to float
+            i0 = (float) ((int16_t) i0_16) / MULTIPLIER;
+            i1 = (float) ((int16_t) i1_16) / MULTIPLIER;
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+    return 1;
+}
+
+/**
+* Parses a command for coupled position control
+* Assumes the message is in format "S<short1><short2>...<short12><checksum>\n"
+
+* @param msg        String: Message to parse
+* @param len        int: Number of bytes in the char array
+* @param sp_theta   float&: Output parameter for theta position set point
+* @param kp_theta   float&: Output parameter for theta position gain
+* @param kd_theta   float&: Output parameter for theta derivative gain
+* @param sp_gamma   float&: Output parameter for gamma position set point
+* @param kp_gamma   float&: Output parameter for gamma position gain
+* @param kp_gamma   float&: Output parameter for gamma derivative gain
+
+* @return      int:    1 if success, -1 if failed to find get full message or checksum failed
+*/
+int parse_coupled_command(char* msg, int len,
+                          float& sp_theta, float& kp_theta, float& kd_theta,
+                          float& sp_gamma, float& kp_gamma, float& kd_gamma) {
     // Set multipliers:
     const float POS_MULTIPLIER = 1000.0f;
     // ^ gives 1 encoder count precision in commanding set points. Receivable range is -32.767 to 32.767 radians.
@@ -305,7 +363,7 @@ void ASCII_protocol_process_line(const uint8_t* buffer, size_t len, StreamSink& 
         respond(response_channel, use_checksum, "Position: p axis pos vel-ff I-ff");
         respond(response_channel, use_checksum, "Velocity: v axis vel I-ff");
         respond(response_channel, use_checksum, "Current: c axis I");
-        responsd(response_channel,use_checksum,"Current to both motors with response: C I0 I1")
+        respond(response_channel,use_checksum,"Current to both motors with response: C I0 I1");
         respond(response_channel, use_checksum, "");
         respond(response_channel, use_checksum, "Properties start at odrive root, such as axis0.requested_state");
         respond(response_channel, use_checksum, "Read: r property");
