@@ -20,7 +20,8 @@ public:
         CTRL_MODE_VELOCITY_CONTROL = 2,
         CTRL_MODE_POSITION_CONTROL = 3,
         CTRL_MODE_COUPLED_CONTROL = 4,
-        CTRL_MODE_XY_CONTROL = 5
+        CTRL_MODE_XY_CONTROL = 5,
+        CTRL_MODE_TRAJECTORY_CONTROL=6
     };
 
     struct Config_t {

@@ -218,8 +218,8 @@ bool Controller::update(float pos_estimate, float vel_estimate, float* current_s
     if (config_.control_mode == CTRL_MODE_COUPLED_CONTROL) {
         float alpha = encoder_to_rad(axes[0]->encoder_.pos_estimate_) + M_PI/2.0f;
         float beta = encoder_to_rad(axes[1]->encoder_.pos_estimate_) - M_PI/2.0f; // Assumes legs started 180 apart
-        float d_alpha = encoder_to_rad(axes[0]->encoder_.pll_vel_);
-        float d_beta = encoder_to_rad(axes[1]->encoder_.pll_vel_);
+        float d_alpha = encoder_to_rad(axes[0]->encoder_.vel_estimate_);
+        float d_beta = encoder_to_rad(axes[1]->encoder_.vel_estimate_);
 
         float theta = alpha/2.0f + beta/2.0f;
         float gamma = alpha/2.0f - beta/2.0f;
@@ -248,8 +248,8 @@ bool Controller::update(float pos_estimate, float vel_estimate, float* current_s
 //current theta, gamma
         float alpha = encoder_to_rad(axes[0]->encoder_.pos_estimate_) + M_PI/2.0f;
         float beta = encoder_to_rad(axes[1]->encoder_.pos_estimate_) - M_PI/2.0f; // Assumes legs started 180 apart
-        float d_alpha = encoder_to_rad(axes[0]->encoder_.pll_vel_);
-        float d_beta = encoder_to_rad(axes[1]->encoder_.pll_vel_);
+        float d_alpha = encoder_to_rad(axes[0]->encoder_.vel_estimate_);
+        float d_beta = encoder_to_rad(axes[1]->encoder_.vel_estimate_);
 
         float theta = alpha/2.0f + beta/2.0f;
         float gamma = alpha/2.0f - beta/2.0f;
