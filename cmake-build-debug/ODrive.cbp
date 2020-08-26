@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ODrive"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ODrive">
+				<Option output="/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/ODrive" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ArduinoI2C"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ODriveArduino"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ODriveArduino/examples"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ODriveArduino/examples/ODriveArduinoTest"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Device"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Device/ST"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Device/ST/STM32F4xx"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/prev_board_ver"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Drivers/DRV8301"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/include"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/include/fibre"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 ODrive"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ODrive/fast">
+				<Option output="/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/ODrive" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ArduinoI2C"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ODriveArduino"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ODriveArduino/examples"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ODriveArduino/examples/ODriveArduinoTest"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Device"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Device/ST"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Device/ST/STM32F4xx"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/prev_board_ver"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Drivers/DRV8301"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/include"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/include/fibre"/>
+					<Add directory="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 ODrive/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ArduinoI2C/ArduinoI2C.ino">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ArduinoI2C/odrive.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ArduinoI2C/odrive_endpoints.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ArduinoI2C/type_traits.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ODriveArduino/ODriveArduino.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ODriveArduino/ODriveArduino.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Arduino/ODriveArduino/examples/ODriveArduinoTest/ODriveArduinoTest.ino">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/arm_common_tables.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/arm_const_structs.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/arm_math.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/cmsis_armcc.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/cmsis_armcc_V6.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/cmsis_gcc.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/core_cm0.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/core_cm0plus.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/core_cm3.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/core_cm4.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/core_cm7.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/core_cmFunc.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/core_cmInstr.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/core_cmSimd.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/core_sc000.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/CMSIS/Include/core_sc300.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/FreeRTOSConfig.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/adc.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/can.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/dma.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/freertos_vars.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/gpio.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/i2c.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/main.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/mxconstants.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/prev_board_ver/main_V3_2.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/prev_board_ver/main_V3_4.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/spi.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/stm32f4xx_hal_conf.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/stm32f4xx_it.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/tim.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/usart.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/usb_device.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/usbd_cdc_if.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/usbd_conf.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Inc/usbd_desc.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/croutine.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOSConfig_template.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/list.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/task.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/list.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/queue.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/timers.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/adc.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/can.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/dma.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/freertos.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/gpio.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/i2c.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/main.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/prev_board_ver/adc_V3_2.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/prev_board_ver/adc_V3_4.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/prev_board_ver/gpio_V3_2.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/prev_board_ver/gpio_V3_4.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/spi.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/stm32f4xx_hal_msp.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/stm32f4xx_hal_timebase_TIM.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/stm32f4xx_it.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/syscalls.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/system_stm32f4xx.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/tim.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/usart.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/usb_device.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/usbd_cdc_if.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/usbd_conf.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Board/v3/Src/usbd_desc.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Drivers/DRV8301/drv8301.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/Drivers/DRV8301/drv8301.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/FreeRTOS-openocd.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/arm_cos_f32.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/arm_sin_f32.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/axis.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/axis.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/board_config_v3.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/controller.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/controller.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/encoder.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/encoder.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/low_level.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/low_level.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/main.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/motor.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/motor.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/nvm.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/nvm.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/nvm_config.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/odrive_main.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/sensorless_estimator.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/sensorless_estimator.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/trapTraj.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/trapTraj.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/utils.c">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/MotorControl/utils.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication/ascii_protocol.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication/ascii_protocol.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication/communication.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication/communication.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication/interface_can.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication/interface_can.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication/interface_i2c.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication/interface_i2c.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication/interface_uart.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication/interface_uart.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication/interface_usb.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/communication/interface_usb.h">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/include/fibre/cpp_utils.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/include/fibre/crc.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/include/fibre/decoders.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/include/fibre/encoders.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/include/fibre/posix_tcp.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/include/fibre/posix_udp.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/include/fibre/protocol.hpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/posix_tcp.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/posix_udp.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/cpp/protocol.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/test/run_tests.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/Firmware/fibre/test/test_server.cpp">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/analysis/cogging_torque/cogging_harmonics.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/analysis/motor_analysis/VelliPlot.m">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/analysis/numeric_path_opt/Main.m">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/analysis/numeric_path_opt/predictionmatrices.m">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/motion_planning/PlanTrap.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/__init__.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/code_generator.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/configuration.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/dfu.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/dfuse/COPYING">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/dfuse/DfuDevice.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/dfuse/DfuFile.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/dfuse/DfuState.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/dfuse/DfuStatus.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/dfuse/__init__.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/enums.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/shell.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/tests.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/utils.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive/version.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive_demo.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrive_header_template.h.in">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrivetool">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/odrivetool.bat">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/requirements.txt">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/run_tests.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/setup.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/setup_hall_as_index.py">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/test-rig-loopback.yaml">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/test-rig-parallel.yaml">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/tools/usbpermission">
+			<Option target="ODrive"/>
+		</Unit>
+		<Unit filename="/Users/ouyangyikang/Downloads/实验室/ODrive/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,3 @@
+/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ouyangyikang/Downloads/实验室/ODrive/cmake-build-debug/CMakeFiles/ODrive.dir

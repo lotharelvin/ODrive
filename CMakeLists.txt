@@ -1,0 +1,268 @@
+cmake_minimum_required(VERSION 3.15)
+project(ODrive)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(Arduino/ArduinoI2C)
+include_directories(Arduino/ODriveArduino)
+include_directories(Arduino/ODriveArduino/examples)
+include_directories(Arduino/ODriveArduino/examples/ODriveArduinoTest)
+include_directories(Firmware/Board/v3/Drivers/CMSIS)
+include_directories(Firmware/Board/v3/Drivers/CMSIS/Device)
+include_directories(Firmware/Board/v3/Drivers/CMSIS/Device/ST)
+include_directories(Firmware/Board/v3/Drivers/CMSIS/Device/ST/STM32F4xx)
+include_directories(Firmware/Board/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include)
+include_directories(Firmware/Board/v3/Drivers/CMSIS/Include)
+include_directories(Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc)
+include_directories(Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy)
+include_directories(Firmware/Board/v3/Inc)
+include_directories(Firmware/Board/v3/Inc/prev_board_ver)
+include_directories(Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc)
+include_directories(Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc)
+include_directories(Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS)
+include_directories(Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include)
+include_directories(Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F)
+include_directories(Firmware/communication)
+include_directories(Firmware/Drivers/DRV8301)
+include_directories(Firmware/fibre/cpp/include)
+include_directories(Firmware/fibre/cpp/include/fibre)
+include_directories(Firmware/MotorControl)
+
+add_executable(ODrive
+        analysis/cogging_torque/cogging_harmonics.py
+        analysis/motor_analysis/VelliPlot.m
+        analysis/numeric_path_opt/Main.m
+        analysis/numeric_path_opt/predictionmatrices.m
+        Arduino/ArduinoI2C/ArduinoI2C.ino
+        Arduino/ArduinoI2C/odrive.h
+        Arduino/ArduinoI2C/odrive_endpoints.h
+        Arduino/ArduinoI2C/type_traits.h
+        Arduino/ODriveArduino/examples/ODriveArduinoTest/ODriveArduinoTest.ino
+        Arduino/ODriveArduino/ODriveArduino.cpp
+        Arduino/ODriveArduino/ODriveArduino.h
+        Firmware/Board/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h
+        Firmware/Board/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+        Firmware/Board/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/arm_common_tables.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/arm_const_structs.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/arm_math.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/cmsis_armcc.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/cmsis_armcc_V6.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/cmsis_gcc.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/core_cm0.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/core_cm0plus.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/core_cm3.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/core_cm4.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/core_cm7.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/core_cmFunc.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/core_cmInstr.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/core_cmSimd.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/core_sc000.h
+        Firmware/Board/v3/Drivers/CMSIS/Include/core_sc300.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
+        Firmware/Board/v3/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c
+        Firmware/Board/v3/Inc/prev_board_ver/main_V3_2.h
+        Firmware/Board/v3/Inc/prev_board_ver/main_V3_4.h
+        Firmware/Board/v3/Inc/adc.h
+        Firmware/Board/v3/Inc/can.h
+        Firmware/Board/v3/Inc/dma.h
+        Firmware/Board/v3/Inc/freertos_vars.h
+        Firmware/Board/v3/Inc/FreeRTOSConfig.h
+        Firmware/Board/v3/Inc/gpio.h
+        Firmware/Board/v3/Inc/i2c.h
+        Firmware/Board/v3/Inc/main.h
+        Firmware/Board/v3/Inc/mxconstants.h
+        Firmware/Board/v3/Inc/spi.h
+        Firmware/Board/v3/Inc/stm32f4xx_hal_conf.h
+        Firmware/Board/v3/Inc/stm32f4xx_it.h
+        Firmware/Board/v3/Inc/tim.h
+        Firmware/Board/v3/Inc/usart.h
+        Firmware/Board/v3/Inc/usb_device.h
+        Firmware/Board/v3/Inc/usbd_cdc_if.h
+        Firmware/Board/v3/Inc/usbd_conf.h
+        Firmware/Board/v3/Inc/usbd_desc.h
+        Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h
+        Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c
+        Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
+        Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+        Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
+        Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
+        Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c
+        Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c
+        Firmware/Board/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOSConfig_template.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/list.c
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/queue.c
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+        Firmware/Board/v3/Middlewares/Third_Party/FreeRTOS/Source/timers.c
+        Firmware/Board/v3/Src/prev_board_ver/adc_V3_2.c
+        Firmware/Board/v3/Src/prev_board_ver/adc_V3_4.c
+        Firmware/Board/v3/Src/prev_board_ver/gpio_V3_2.c
+        Firmware/Board/v3/Src/prev_board_ver/gpio_V3_4.c
+        Firmware/Board/v3/Src/adc.c
+        Firmware/Board/v3/Src/can.c
+        Firmware/Board/v3/Src/dma.c
+        Firmware/Board/v3/Src/freertos.c
+        Firmware/Board/v3/Src/gpio.c
+        Firmware/Board/v3/Src/i2c.c
+        Firmware/Board/v3/Src/main.c
+        Firmware/Board/v3/Src/spi.c
+        Firmware/Board/v3/Src/stm32f4xx_hal_msp.c
+        Firmware/Board/v3/Src/stm32f4xx_hal_timebase_TIM.c
+        Firmware/Board/v3/Src/stm32f4xx_it.c
+        Firmware/Board/v3/Src/syscalls.c
+        Firmware/Board/v3/Src/system_stm32f4xx.c
+        Firmware/Board/v3/Src/tim.c
+        Firmware/Board/v3/Src/usart.c
+        Firmware/Board/v3/Src/usb_device.c
+        Firmware/Board/v3/Src/usbd_cdc_if.c
+        Firmware/Board/v3/Src/usbd_conf.c
+        Firmware/Board/v3/Src/usbd_desc.c
+        Firmware/communication/ascii_protocol.cpp
+        Firmware/communication/ascii_protocol.hpp
+        Firmware/communication/communication.cpp
+        Firmware/communication/communication.h
+        Firmware/communication/interface_can.cpp
+        Firmware/communication/interface_can.hpp
+        Firmware/communication/interface_i2c.cpp
+        Firmware/communication/interface_i2c.h
+        Firmware/communication/interface_uart.cpp
+        Firmware/communication/interface_uart.h
+        Firmware/communication/interface_usb.cpp
+        Firmware/communication/interface_usb.h
+        Firmware/Drivers/DRV8301/drv8301.c
+        Firmware/Drivers/DRV8301/drv8301.h
+        Firmware/fibre/cpp/include/fibre/cpp_utils.hpp
+        Firmware/fibre/cpp/include/fibre/crc.hpp
+        Firmware/fibre/cpp/include/fibre/decoders.hpp
+        Firmware/fibre/cpp/include/fibre/encoders.hpp
+        Firmware/fibre/cpp/include/fibre/posix_tcp.hpp
+        Firmware/fibre/cpp/include/fibre/posix_udp.hpp
+        Firmware/fibre/cpp/include/fibre/protocol.hpp
+        Firmware/fibre/cpp/posix_tcp.cpp
+        Firmware/fibre/cpp/posix_udp.cpp
+        Firmware/fibre/cpp/protocol.cpp
+        Firmware/fibre/test/run_tests.cpp
+        Firmware/fibre/test/test_server.cpp
+        Firmware/MotorControl/arm_cos_f32.c
+        Firmware/MotorControl/arm_sin_f32.c
+        Firmware/MotorControl/axis.cpp
+        Firmware/MotorControl/axis.hpp
+        Firmware/MotorControl/board_config_v3.h
+        Firmware/MotorControl/controller.cpp
+        Firmware/MotorControl/controller.hpp
+        Firmware/MotorControl/encoder.cpp
+        Firmware/MotorControl/encoder.hpp
+        Firmware/MotorControl/low_level.cpp
+        Firmware/MotorControl/low_level.h
+        Firmware/MotorControl/main.cpp
+        Firmware/MotorControl/motor.cpp
+        Firmware/MotorControl/motor.hpp
+        Firmware/MotorControl/nvm.c
+        Firmware/MotorControl/nvm.h
+        Firmware/MotorControl/nvm_config.hpp
+        Firmware/MotorControl/odrive_main.h
+        Firmware/MotorControl/sensorless_estimator.cpp
+        Firmware/MotorControl/sensorless_estimator.hpp
+        Firmware/MotorControl/trapTraj.cpp
+        Firmware/MotorControl/trapTraj.hpp
+        Firmware/MotorControl/utils.c
+        Firmware/MotorControl/utils.h
+        Firmware/FreeRTOS-openocd.c
+        tools/motion_planning/PlanTrap.py
+        tools/odrive/dfuse/__init__.py
+        tools/odrive/dfuse/COPYING
+        tools/odrive/dfuse/DfuDevice.py
+        tools/odrive/dfuse/DfuFile.py
+        tools/odrive/dfuse/DfuState.py
+        tools/odrive/dfuse/DfuStatus.py
+        tools/odrive/__init__.py
+        tools/odrive/code_generator.py
+        tools/odrive/configuration.py
+        tools/odrive/dfu.py
+        tools/odrive/enums.py
+        tools/odrive/shell.py
+        tools/odrive/tests.py
+        tools/odrive/utils.py
+        tools/odrive/version.py
+        tools/odrive_demo.py
+        tools/odrive_header_template.h.in
+        tools/odrivetool
+        tools/odrivetool.bat
+        tools/requirements.txt
+        tools/run_tests.py
+        tools/setup.py
+        tools/setup_hall_as_index.py
+        tools/test-rig-loopback.yaml
+        tools/test-rig-parallel.yaml
+        tools/usbpermission)
